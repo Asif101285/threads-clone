@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const foem = document.querySelector("#form");
+const form = document.querySelector("#form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 const signUpEmail = document.querySelector("#email").value;

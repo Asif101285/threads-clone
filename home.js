@@ -28,7 +28,17 @@ signInWithEmailAndPassword(auth, signinEmail, signinPassword)
     const user = userCredential.user;
     alert("sign in sucssedfull")
     // ...
+    const currentUserUID = user.uid;
+      const currentUserName = user.displayName;
+      sessionStorage.setItem("currentUserUID", currentUserUID);
+      sessionStorage.setItem("currentUserName", currentUserName);
+      setTimeout(() => {
+        location.assign("home/home.html");
+      }, 2000);
+      // ...
+      signupForm.reset();
   })
+  
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
